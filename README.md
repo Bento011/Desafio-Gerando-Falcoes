@@ -191,9 +191,9 @@ A tabela `workspace.default.base_unificada_gf` contém dados integrados de venda
 | categoria        | String   | Categoria do produto                           |
 | marca            | String   | Marca do produto                               |
 | modelo           | String   | Modelo do produto                              |
-| capacidade       | String   | Capacidade do produto                          |
-| dimensao         | String   | Dimensão do produto                            |
-| potencia         | String   | Potência do produto                            |
+| capacidade       | String   | Capacidade do produto (L)                      |
+| dimensao         | String   | Dimensão do produto (cm ou pol)                |
+| potencia         | String   | Potência do produto (W)                        |
 | id_cliente       | Integer  | Identificador do cliente                       |
 | nome             | String   | Nome do cliente                                |
 | email            | String   | Email do cliente                               |
