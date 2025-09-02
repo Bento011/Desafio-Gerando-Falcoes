@@ -5,6 +5,7 @@
     1.1 [Objetivo](#id1_1) <br>
     1.2 [Resultado esperado](#id1_2) <br>
     1.3 [Conteúdos do repositório](#id1_3) <br>
+    1.4 [Instruções para Executar o Notebook no Databricks](#id1_4) <br>
 2. [BASE DE DADOS](#id2) <br>
     2.1 [Descrição](#id2_1) <br>
 3. [METODOLOGIA](#id3) <br>
@@ -29,12 +30,62 @@ Por fim, um painel negocial, exibindo os dados da base final e servindo como fer
 <a name="id1_3"></a>
 ### 1.3 Conteúdos do repositório
 Abaixo, encontram-se as descrições de cada item do repositório:
+
 - **Gerando_Falcoes_Painel**: Arquivo .pbxi (Power BI) com o Painel Negocial alimentado pela base final.
+
 - **Gerando_Falcoes_ETL**: Notebook contendo o processo de ETL aplicado nos dados fornecidos.
+
 - **Gerando_Falcoes_v1**: Notebook de exploração estruturado, com o passo-a-passo dos testes necessários para a construção da ETL.
+
 - **Gerando_Falcoes_v0**: Notebook de exploração não estruturado, com a primeira análise exploratória dos dados.
+
 - **Base_Unificada_GF**: Amostra da base final e saída da ETL.
+
 - **clientes.csv, vendas.csv, produtos.csv**: Dados de origem.
+
+<a name="id1_4"></a>
+### 1.4 Instruções para Executar o Notebook no Databricks
+
+#### Pré-requisitos
+1. **Conta no Databricks**: Certifique-se de ter uma conta no Databricks. Se não tiver, crie uma em [Databricks](https://databricks.com/).
+
+2. **Acesso ao GitHub**: Tenha uma conta no GitHub para clonar o repositório onde o notebook está armazenado.
+
+#### Passo-a-Passo
+
+##### 1. Configuração Inicial
+1. **Login no Databricks**:
+   - Acesse o Databricks e faça login com suas credenciais.
+
+##### 2. Importação do Notebook
+1. **Importar Notebook**:
+   - No menu lateral, clique em "Workspace".
+   - Navegue até a pasta onde deseja importar o notebook.
+   - Clique em "Import" e selecione "URL".
+   - Insira a URL do notebook no GitHub ou faça upload do arquivo `.dbc` ou `.ipynb` do notebook.
+
+2. **Importar Base de Dados**:
+   - No repositóno no GitHub, baixe os arquivos fornecidos: `vendas.csv`, `produtos.csv` e `clientes.csv`.
+   - No menu lateral, clique em "Data".
+   - Clique em "Add Data" e selecione "Upload File".
+   - Selecione o arquivo CSV e faça o upload.
+
+##### 3. Execução do Notebook
+1. **Abrir o Notebook**:
+   - Navegue até o notebook importado no seu workspace.
+   - Clique para abrir o notebook.
+
+2. **Anexar o Cluster**:
+   - No topo do notebook, selecione o cluster padrão.
+
+3. **Executar as Células**:
+   - Execute cada célula do notebook sequencialmente clicando no ícone de "play" ao lado de cada célula ou pressionando `Shift + Enter`.
+
+##### 4. Verificação e Salvamento
+1. **Verificar Resultados**:
+   - Verifique os resultados exibidos no notebook para garantir que os dados foram processados corretamente.
+
+Seguindo esses passos, você conseguirá executar o notebook no Databricks e integrar suas mudanças ao repositório GitHub.
 
 <a name="id2"></a>
 ## 2. BASE DE DADOS
@@ -90,15 +141,22 @@ Abaixo está o passo-a-passo das transformações realizadas:
 
 3. **Enriquecimento dos Dados**
    - Novas colunas são criadas a partir do processamento dos nomes dos produtos (coluna `nome_produto`), como `categoria`, `marca`, `modelo`, entre outras características técnicas.
+
    - Para a identificação da `marca`, utiliza-se uma lista predefinida com o mapeamento das marcas no catálogo de produtos atual.
+
    - A coluna `categoria` é construída com strings de até 2 palavras (3 se contiver stop-words) que descrevem, em termos gerais, a categoria do produto e se encontram no início da coluna `nome_produto`. São aplicadas regras para padronização e limpeza dos dados, visando garantir que, nessa análise, sejam desconsideradas as marcas e que sejam registradas somente categorias com até 2 palavras (desconsiderando stop-words).
+
    - A coluna `modelo` é preenchida com as informações após o token da marca.
+   
    - Extração de Capacidade: `r"(\d+(?:,\d+)?\s?[lL])"` - Este regex extrai valores numéricos seguidos por "l" ou "L", indicando capacidade em litros.
+   
    - Extração de Dimensão: `r"(\d+(?:\.\d+)?\s*(\"|”|''|pol))"` - Este regex extrai valores numéricos seguidos por caracteres de polegadas (", ”, '', pol), indicando dimensões.
+   
    - Extração de Potência: `r"(\d+(?:,\d+)?\s?W)"` - Este regex extrai valores numéricos seguidos por "W", indicando potência em watts.
 
 4. **Transformações Adicionais**
    - Conversão de tipos de dados para garantir consistência (ex: datas, valores numéricos).
+
    - Criação de colunas derivadas, como `ano_mes_venda` para facilitar análises temporais.
 
 5. **Persistência**
@@ -110,6 +168,7 @@ Este pipeline garante que os dados estejam integrados, limpos e enriquecidos par
 ### 3.2 Premissas
  
 - Na tabela de origem `produtos.csv` existe a coluna `marca`, com informações a respeito da categoria do produto e incompletas, optou-se pela eliminação da coluna e pela construção de outra coluna `marca` do 0, com a l''ogica descrita acima.
+
 - Na tabela de origem `cliente.csv` existe a coluna `cidade`, cujas informações não se referem a cidades brasileiras, aparentando serem parte do nome dos clientes. Além disso, os dados não são consistentes entre si, assim, optou-se pela eliminação da coluna da análise.
  
 ## 4. RESULTADOS
