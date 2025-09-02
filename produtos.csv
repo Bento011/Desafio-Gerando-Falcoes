@@ -1,0 +1,53 @@
+id_produto,nome_produto,descricao,marca
+1,Air Fryer Mondial AF-30L,Fritadeira sem óleo com capacidade de 3L e 1500W de potência - Preta,Air
+2,Notebook Dell Inspiron 15,"Notebook com processador Intel i5, 8GB RAM, SSD 256GB - Windows 11",
+3,Smartphone Samsung Galaxy S23,"Tela 6.1”, 8GB RAM, 128GB - Preto",Smartphone
+4,Smart TV LG 50'' 4K,"Smart TV com painel LED UHD 4K, WebOS e controle Smart Magic",Smart
+5,Cafeteira Nespresso Inissia,Máquina de café expresso com reservatório de 700ml - Preto,Cafeteira
+6,Batedeira Arno Facilita,"3 velocidades + Pulsar, tigela de 4L",Batedeira
+7,Aspirador de Pó Electrolux Easybox,"Sem saco, filtro HEPA, potência 1600W",Aspirador
+8,Geladeira Brastemp Frost Free 375L,"Duplex, Inox, com freezer de 86L",
+9,Ventilador de Mesa Mondial 40cm,"6 pás, oscilante, 3 velocidades",Ventilador
+10,Ferro de Passar a Vapor Black+Decker,"Base antiaderente, spray frontal e vapor vertical",
+11,Echo Dot 5ª Geração,"Alto-falante inteligente com Alexa, Wi-Fi e Bluetooth",Echo
+12,Tablet Samsung Galaxy Tab A7,"Tela de 10.4”, 32GB, Wi-Fi, Android",Tablet
+13,Impressora HP Ink Tank 416,"Multifuncional com Wi-Fi, tanque de tinta",
+14,Monitor LG 24MK430H,"Full HD 23.8”, HDMI, VGA, FreeSync",Monitor
+15,Micro-ondas Electrolux 20L,"Painel azul, função Tira Odor, Branco",Micro-ondas
+16,Ar Condicionado Split LG Dual Inverter,"9000 BTUs, Quente/Frio, 220V",Ar
+17,Chuveiro Lorenzetti Acqua Duo Ultra,"7500W, 127V, com pressurizador",Chuveiro
+18,Forno Elétrico Fischer Fit Line 44L,"Timer, controle de temperatura até 250°C",Forno
+19,Liquidificador Philips Walita Problend,"Potência 800W, 5 velocidades, copo de vidro",Liquidificador
+20,Cadeira de Escritório Ergonômica,"Encosto mesh, apoio de braço regulável",
+21,Teclado Gamer Redragon Kumara,"Switch mecânico Outemu Blue, LED vermelho",Teclado
+22,Mouse Logitech MX Master 3,"Bluetooth, sensor laser, 7 botões",Mouse
+23,Smartwatch Xiaomi Redmi Watch 3,"GPS, monitor cardíaco, tela AMOLED",Smartwatch
+24,Smartwatch Apple Watch SE,"GPS, 40mm, Pulseira Esportiva",Smartwatch
+25,Smartphone Motorola Moto G84,"5G, 256GB, Tela pOLED 6.5”",Smartphone
+26,Cooktop 4 bocas Fischer,"Vidro temperado, acendimento automático",Cooktop
+27,Notebook Acer Aspire 5,"Intel i7, 16GB RAM, SSD 512GB",
+28,Monitor Samsung 27'' LED,"Full HD, HDMI, VGA, 75Hz",
+29,Cadeira Gamer ThunderX3,"Reclinável, base metálica, apoio lombar",Cadeira
+30,Microfone Fifine K669B,"USB, condensador cardioide para podcast",Microfone
+31,Webcam Logitech C920,"Full HD 1080p, microfone embutido",Webcam
+32,Notebook Lenovo Ideapad 3,"Intel i3, SSD 256GB, Tela 15.6''",Notebook
+33,Caixa de Som JBL Flip 6,"Bluetooth, à prova d’água, 12h de bateria",Caixa
+34,Kindle 11ª geração,"Iluminação embutida, 16GB, Wi-Fi",Kindle
+35,Placa de Vídeo RTX 3060,"12GB GDDR6, Ray Tracing",Placa
+36,SSD Kingston 1TB NVMe,"Leitura 2100MB/s, gravação 1700MB/s",SSD
+37,HD Externo Seagate 2TB,"USB 3.0, portátil",HD
+38,Roteador TP-Link Archer AX10,"Wi-Fi 6, Dual Band, até 1.5Gbps",Roteador
+39,Hub USB 4 portas 3.0,"Alta velocidade, compatível com Windows/Mac",Hub
+40,Carregador Veicular Turbo,"USB-C + USB-A, 30W",Carregador
+41,Filtro de Linha Clamper,"Proteção contra surtos elétricos, 6 tomadas",Filtro
+42,Luminária de Mesa LED,"Toque sensível, 3 níveis de brilho",
+43,Balança Digital Corporal,"Com app via Bluetooth, até 180kg",Balança
+44,Fritadeira Elétrica Britânia,"3,5L, controle de temperatura",Fritadeira
+45,Relógio de Parede Analógico,"Silencioso, ponteiros metálicos",
+46,Aquecedor Elétrico Mondial,"2 níveis de potência, alça para transporte",Aquecedor
+47,Escova Secadora Mondial,"1200W, bivolt, cerdas mistas",
+48,Aspirador Robô WAP Robot W90,"Automático, sensores antiqueda",Aspirador
+49,Mochila Executiva Dell,Acolchoada para notebook 15.6'',Mochila
+50,Adaptador HDMI para VGA,"Com áudio, compatível com monitores antigos",Adaptador
+51,Suporte Articulado para TV,"De 32 até 55'', parede, inclinação ajustável",Suporte
+52,Fonte ATX 500W,"Real, PFC ativo, certificação 80 Plus",Fonte
