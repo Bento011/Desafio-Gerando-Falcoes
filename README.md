@@ -19,7 +19,7 @@
  
 <a name="id1_1"></a>
 ### 1.1 Objetivo
-O objetivo deste projeto é analisar os dados de 3 bases de dados fonecidas e construir uma análise focada na geração de insight e apoio a tomada de decisão.
+O objetivo deste projeto é analisar os dados de 3 bases de dados fonecidas e construir uma análise focada na geração de insights e apoio a tomada de decisão.
 
 <a name="id1_2"></a>
 ### 1.2 Resultado esperado
@@ -81,10 +81,6 @@ Abaixo, encontram-se as descrições de cada item do repositório:
 3. **Executar as Células**:
    - Execute cada célula do notebook sequencialmente clicando no ícone de "play" ao lado de cada célula ou pressionando `Shift + Enter`.
 
-##### 4. Verificação e Salvamento
-1. **Verificar Resultados**:
-   - Verifique os resultados exibidos no notebook para garantir que os dados foram processados corretamente.
-
 Seguindo esses passos, você conseguirá executar o notebook no Databricks e integrar suas mudanças ao repositório GitHub.
 
 <a name="id2"></a>
@@ -142,11 +138,11 @@ Abaixo está o passo-a-passo das transformações realizadas:
 3. **Enriquecimento dos Dados**
    - Novas colunas são criadas a partir do processamento dos nomes dos produtos (coluna `nome_produto`), como `categoria`, `marca`, `modelo`, entre outras características técnicas.
 
-   - Para a identificação da `marca`, utiliza-se uma lista predefinida com o mapeamento das marcas no catálogo de produtos atual.
+   - Para a identificação da `marca`, utiliza-se uma lista predefinida com o mapeamento das marcas no catálogo de produtos atual para itendificar o token da marca na análise da coluna `nome_produto`.
 
    - A coluna `categoria` é construída com strings de até 2 palavras (3 se contiver stop-words) que descrevem, em termos gerais, a categoria do produto e se encontram no início da coluna `nome_produto`. São aplicadas regras para padronização e limpeza dos dados, visando garantir que, nessa análise, sejam desconsideradas as marcas e que sejam registradas somente categorias com até 2 palavras (desconsiderando stop-words).
 
-   - A coluna `modelo` é preenchida com as informações após o token da marca.
+   - A coluna `modelo` é preenchida com as informações após o token da `marca`.
    
    - Extração de Capacidade: `r"(\d+(?:,\d+)?\s?[lL])"` - Este regex extrai valores numéricos seguidos por "l" ou "L", indicando capacidade em litros.
    
@@ -167,7 +163,7 @@ Este pipeline garante que os dados estejam integrados, limpos e enriquecidos par
 <a name="id3_2"></a>
 ### 3.2 Premissas
  
-- Na tabela de origem `produtos.csv` existe a coluna `marca`, com informações a respeito da categoria do produto e incompletas, optou-se pela eliminação da coluna e pela construção de outra coluna `marca` do 0, com a l''ogica descrita acima.
+- Na tabela de origem `produtos.csv` existe a coluna `marca`, com informações a respeito da categoria do produto e incompletas, optou-se pela eliminação da coluna e pela construção de outra coluna `marca` do 0, com a lógica descrita acima.
 
 - Na tabela de origem `cliente.csv` existe a coluna `cidade`, cujas informações não se referem a cidades brasileiras, aparentando serem parte do nome dos clientes. Além disso, os dados não são consistentes entre si, assim, optou-se pela eliminação da coluna da análise.
  
