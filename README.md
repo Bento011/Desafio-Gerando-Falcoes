@@ -33,6 +33,8 @@ Abaixo, encontram-se as descrições de cada item do repositório:
 
 - **Gerando_Falcoes_Painel**: Arquivo .pbxi (Power BI) com o Painel Negocial alimentado pela base final.
 
+- **Gerando_Falcoes_Painel**: Arquivo .pbxi (Power BI) com uma segunda versão do Painel Negocial alimentado pela base final.
+
 - **Gerando_Falcoes_ETL**: Notebook contendo o processo de ETL aplicado nos dados fornecidos.
 
 - **Gerando_Falcoes_v1**: Notebook de exploração estruturado, com o passo-a-passo dos testes necessários para a construção da ETL.
